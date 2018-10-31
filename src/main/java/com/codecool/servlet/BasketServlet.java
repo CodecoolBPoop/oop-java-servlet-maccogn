@@ -28,7 +28,6 @@ public class BasketServlet extends HttpServlet {
                     "<td><a href=\"/basket?item="+ItemStore.basket.get(i).getId()+"&remove="+true+"\">Remove</a></td>");
         }
 
-
         try {
             out.println("<!DOCTYPE html>");
             out.println("<html><head>");
@@ -36,11 +35,10 @@ public class BasketServlet extends HttpServlet {
             out.println("<title>"+title+"</title></head>");
             out.println("<body>");
             out.println("<h1>Basket</h1>");
-            out.print("Basket Item" + ItemStore.basket.size());// says Hello
-            out.println("<form method=\"get\" action=\"/store\">");
+            out.print("Basket Item" + ItemStore.basket.size());
             out.println("<table><th><td>ID</td><td>NAME</td><td>PRIZE</td><td>Buy</td><td>Remove</td></th>");
             out.println(buffer);
-            out.println("</table></form>");
+            out.println("</table>");
             out.println("</body>");
             out.println("</html>");
         } finally {
